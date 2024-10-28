@@ -314,7 +314,7 @@ class EthernetManager:
 
                 valid_ip = EthernetManager.weak_is_ip_address(address.address)
                 ip = address.address if valid_ip else "undefined"
-
+                logger.info(f"Interface: {interface}, IP Address: {ip}")
                 is_static_ip = self.is_static_ip(ip)
 
                 # Populate our output item
